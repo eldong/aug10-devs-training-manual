@@ -66,3 +66,12 @@ Scripts that accompany the manual, and their documentation can be found in the [
 ## License
 
 Please see the [license](LICENSE) for detailed information. When using the GitHub logos, be sure to follow the [GitHub Logos and Usage](https://github.com/logos) guidelines.
+
+## Workshop preparation
+
+Before the workshop:
+
+1. Sign in to GitHub.
+2. Install the latest version of Git.
+3. Confirm you can access the workshop repository.
+4. Bring a browser and a code editor.
