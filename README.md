@@ -1,4 +1,4 @@
-# GitHub Training Manual 
+# GitHub Training Manual - Update from main branch
 
 # Update 2.0
 
