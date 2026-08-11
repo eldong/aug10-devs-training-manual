@@ -63,6 +63,12 @@ Docsify doesn't currently support creating PDFs, but you can generate one using 
 
 Scripts that accompany the manual, and their documentation can be found in the [`script/`](script/) directory. This repository includes development container configuration. So you can run the scripts on the Visual Studio developer container or [GitHub Codespaces](https://github.com/features/codespaces).
 
+## Workshop support
+
+- Review the workshop prerequisites before the session.
+- Open a GitHub issue if you find an error in the materials.
+- Ask the workshop facilitator for help during the live session.
+
 ## License
 
 Please see the [license](LICENSE) for detailed information. When using the GitHub logos, be sure to follow the [GitHub Logos and Usage](https://github.com/logos) guidelines.
