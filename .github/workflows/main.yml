@@ -7,27 +7,24 @@ permissions:
   contents: read
 
 jobs:
-  metrics:
+  secret-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Calculate and publish metrics
+      - name: Verify repository secret
+        env:
+          WORKSHOP_TOKEN: ${{ secrets.WORKSHOP_TOKEN }}
         shell: bash
         run: |
-          FILES=$(find . -path './.git' -prune -o -type f -print | wc -l)
-          DIRECTORIES=$(find . -path './.git' -prune -o -type d -print | wc -l)
-          BYTES=$(du -sb --exclude=.git . | cut -f1)
+          if [[ -z "$WORKSHOP_TOKEN" ]]; then
+            echo "::error::WORKSHOP_TOKEN is not configured"
+            exit 1
+          fi
 
+          echo "The secret is available to this step."
           {
-            echo "# Repository metrics"
+            echo "# Secret check"
             echo ""
-            echo "| Metric | Value |"
-            echo "|---|---:|"
-            echo "| Files | $FILES |"
-            echo "| Directories | $DIRECTORIES |"
-            echo "| Total bytes | $BYTES |"
+            echo "✅ \`WORKSHOP_TOKEN\` is configured."
             echo ""
-            echo "_Measured at commit \`${GITHUB_SHA::7}\`._"
+            echo "The secret value was not printed."
           } >> "$GITHUB_STEP_SUMMARY"
