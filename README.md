@@ -1,6 +1,6 @@
 # GitHub Training Manual - Update from main branch
 
-# Update 3.0
+# Update 4.0  From Merge Demo Branch
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
