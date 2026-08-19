@@ -3,9 +3,19 @@ name: GitHub Actions Workshop
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  hello:
+  explore:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
-        run: echo "Hello from GitHub Actions!"
+      # uses: calls a Marketplace action — this one clones your repo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Explore the repository
+        run: |
+          echo "Runner directory: $PWD"
+          echo "Repository files:"
+          find . -maxdepth 2 -type f | sort
